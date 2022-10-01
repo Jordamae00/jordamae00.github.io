@@ -26,15 +26,15 @@ function init()
     ];
 
     colors=[
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 ),
-    vec4(     ,     ,     , 1.0 )
+    vec4( 1.0 , 0.0 , 0.0 , 1.0 ),
+    vec4( 0.0 , 1.0 , 0.0 , 1.0 ),
+    vec4( 0.0 , 0.0 , 1.0 , 1.0 ),
+    vec4( 1.0 , 1.0 , 0.0 , 1.0 ),
+    vec4( 0.0 , 1.0 , 1.0 , 1.0 ),
+    vec4( 1.0 , 0.0 , 1.0 , 1.0 ),
+    vec4( 0.8 , 0.5 , 0.2 , 1.0 ),
+    vec4( 0.2 , 0.5 , 0.8 , 1.0 ),
+    vec4( 0.2 , 0.8 , 0.5 , 1.0 )
     ];
     
     //
@@ -60,24 +60,23 @@ function init()
     gl.vertexAttribPointer( positionLoc, 2, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( positionLoc );
 
-    // a color buffer is created and attached
     var cbufferId = gl.createBuffer();
     gl.bindBuffer( gl.ARRAY_BUFFER, cbufferId );
     gl.bufferData( gl.ARRAY_BUFFER, flatten(colors), gl.STATIC_DRAW );
+    
     var colorLoc = gl.getAttribLocation( program, "aColor" );
     gl.vertexAttribPointer( colorLoc, 4, gl.FLOAT, false, 0, 0 );
     gl.enableVertexAttribArray( colorLoc );
 
-    // slider event listener
+    document.getElementById("slider").onchange = function(event) {
+        sliderVal = parseInt(event.target.value);
+        render();
+    };
 
     render();
 };
 
 function render() {
     gl.clear( gl.COLOR_BUFFER_BIT );
-
-    // use the variable from the slider event listener to determine how many
-    // points to render
-
-    gl.drawArrays( gl.POINTS, 0,      );
+    gl.drawArrays( gl.POINTS, 0, sliderVal );
 }
