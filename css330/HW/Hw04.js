@@ -52,49 +52,50 @@ var numElements = 120;
 
         
     ];
-    var verticesI = [
+    // var verticesI = [
 
-        vec3(-0.75, 0.25,  0.5),
-        vec3(-0.75,  0.75,  0.5),
-        vec3(-0.38,  0.75,  0.5),
-        vec3(-0.38, 0.25,  0.5),
-        vec3(-0.75, 0.25,  -0.5),
-        vec3(-0.75,  0.75,  -0.5),
-        vec3(-0.38,  0.75,  -0.5),
-        vec3(-0.38, 0.25,  -0.5),
-
-        vec3(-0.75,-0.38, 0.5),
-        vec3(-0.75, -0.75, 0.5),
-        vec3(0.75, -0.75, 0.5),
-        vec3(0.75, -0.38, 0.5),
-        vec3(-0.75,-0.38, -0.5),
-        vec3(-0.75, -0.75, -0.5),
-        vec3(0.75, -0.75, -0.5),
-        vec3(0.75, -0.38, -0.5),
+    //      vec3(-0.75, -0.35,  0.5),
+    //     vec3(-0.75,  0.75,  0.5),
+    //     vec3(-0.38,  0.75,  0.5),
+    //     vec3(-0.38, -0.35,  0.5),
+    //     vec3(-0.75, -0.35, -0.5),
+    //     vec3(-0.75,  0.75, -0.5),
+    //     vec3(-0.38,  0.75, -0.5),
+    //     vec3(-0.38, -0.35, -0.5),
         
-        vec3(0.38, 0.75, 0.5),
-        vec3(0.38, 0.25,  0.5),
-        vec3(0.75, 0.25,  0.5),
-        vec3(0.75, 0.75,  0.5),
-        vec3(0.38, 0.75, -0.5),
-        vec3(0.38, 0.25,  -0.5),
-        vec3(0.75, 0.25,  -0.5),
-        vec3(0.75, 0.75,  -0.5),
 
-        vec3(-0.35, 0.75, 0.5), 
-        vec3(-0.35, 0.50, 0.5),
-        vec3(0.35, 0.50, 0.5),
-        vec3(0.35, 0.75, 0.5),
-        vec3(-0.35, 0.75, -0.5), 
-        vec3(-0.35, 0.50, -0.5),
-        vec3(0.35, 0.50, -0.5),
-        vec3(0.35, 0.75, -0.5)
+    //     vec3(-0.75,-0.38, 0.5),
+    //     vec3(-0.75, -0.75, 0.5),
+    //     vec3(0.75, -0.75, 0.5),
+    //     vec3(0.75, -0.38, 0.5),
+    //     vec3(-0.75,-0.38, -0.5),
+    //     vec3(-0.75, -0.75, -0.5),
+    //     vec3(0.75, -0.75, -0.5),
+    //     vec3(0.75, -0.38, -0.5),
+        
+    //     vec3(0.38, 0.75, 0.5),
+    //     vec3(0.38, 0.25,  0.5),
+    //     vec3(0.75, 0.25,  0.5),
+    //     vec3(0.75, 0.75,  0.5),
+    //     vec3(0.38, 0.75, -0.5),
+    //     vec3(0.38, 0.25,  -0.5),
+    //     vec3(0.75, 0.25,  -0.5),
+    //     vec3(0.75, 0.75,  -0.5),
+
+    //     vec3(-0.35, 0.75, 0.5), 
+    //     vec3(-0.35, 0.50, 0.5),
+    //     vec3(0.35, 0.50, 0.5),
+    //     vec3(0.35, 0.75, 0.5),
+    //     vec3(-0.35, 0.75, -0.5), 
+    //     vec3(-0.35, 0.50, -0.5),
+    //     vec3(0.35, 0.50, -0.5),
+    //     vec3(0.35, 0.75, -0.5)
 
 
 
 
 
-    ];
+    // ];
     var vertexColors = [
         vec4(0.0, 0.0, 0.0, 1.0),  // black
         vec4(1.0, 0.0, 0.0, 1.0),  // red
@@ -209,10 +210,17 @@ function init()
 
     var vBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, vBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, flatten(verticesI, verticesU), gl.STATIC_DRAW);
-    var positionLoc = gl.getAttribLocation( program, "aPosition");
+    gl.bufferData(gl.ARRAY_BUFFER, flatten(verticesU), gl.STATIC_DRAW);
+    var positionLoc = gl.getAttribLocation( program, "uPosition");
     gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 0, 0);
     gl.enableVertexAttribArray(positionLoc );
+
+    // var iBuffer = gl.createBuffer();
+    // gl.bindBuffer(gl.ARRAY_BUFFER, iBuffer);
+    // gl.bufferData(gl.ARRAY_BUFFER, flatten(verticesI), gl.STATIC_DRAW);
+    // var ipositionLoc = gl.getAttribLocation( program, "iPosition");
+    // gl.vertexAttribPointer(ipositionLoc, 3, gl.FLOAT, false, 0, 0);
+    // gl.enableVertexAttribArray(ipositionLoc );
 
     thetaLoc = gl.getUniformLocation(program, "uTheta");
 
