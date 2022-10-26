@@ -13,18 +13,22 @@
 <canvas id="gl-canvas" width="512" height="512"> </canvas>
 <script id="vertex-shader" type="x-shader/x-vertex">
 #version 300 es
-
-in  vec4 aPosition;
+in vec4 iPosition;
+in vec4 uPosition;
 in  vec4 aColor;
 out vec4 vColor;
+ 
+uniform vec3 uTheta;
+uniform float t;
+ 
+vec4 tmpPosition;
+
 
 uniform vec3 uTheta;
 
 void main()
 {   
-     in vec4 iPosition;
-     in vec4 uPosition;
-     uniform float t;
+     
 
     // Compute the sines and cosines of theta for each of
     //   the three axes in one computation.
@@ -53,7 +57,7 @@ void main()
     tmpPosition = t*iPosition+(1.0-t)*uPosition;
     gl_Position = rz * ry * rx * tmpPosition;
     gl_Position.z = -gl_Position.z;
-    
+
     <!-- gl_Position = rz * ry * rx * aPosition;
     gl_Position.z = -gl_Position.z;
 
@@ -85,3 +89,4 @@ main()
 
 </body>
 </html>
+
