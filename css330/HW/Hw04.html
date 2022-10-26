@@ -24,7 +24,7 @@ uniform float t;
 vec4 tmpPosition;
 
 
-uniform vec3 uTheta;
+
 
 void main()
 {   
@@ -57,13 +57,6 @@ void main()
     tmpPosition = t*iPosition+(1.0-t)*uPosition;
     gl_Position = rz * ry * rx * tmpPosition;
     gl_Position.z = -gl_Position.z;
-
-    <!-- gl_Position = rz * ry * rx * aPosition;
-    gl_Position.z = -gl_Position.z;
-
-    gl_Position.x = t*iPosition.x + (1.0-t)*uPosition.x;
-    gl_Position.y = t*iPosition.y + (1.0-t)*uPosition.y;
-    gl_Position.z = t*iPosition.z + (1.0-t)*uPosition.z; -->
 
 }
 </script>
