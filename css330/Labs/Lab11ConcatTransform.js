@@ -27,6 +27,7 @@ function init()
     vec4(  0.00 ,  0.25 ,  0.00 ,  1.00 )
     ];
     
+    
     //
     //  Configure WebGL
     //
