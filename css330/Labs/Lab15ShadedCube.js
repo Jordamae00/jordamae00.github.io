@@ -41,6 +41,7 @@ var materialDiffuse  = vec4(0.01 , 0.01 , 0.01 , 1.0);
 var materialSpecular = vec4(0.5 , 0.5 , 0.5, 1.0);
 var materialShininess = 32.0;
 */
+//pretty much just looks black
 
 // brass
 /*
@@ -49,6 +50,7 @@ var materialDiffuse  = vec4(0.780392 , 0.568627 , 0.113725 , 1.0);
 var materialSpecular  = vec4(0.992157 , 0.941176 , 0.807843, 1.0);
 var materialShininess = 27.8974;
 */
+//has more of a shadow then other types and is an yellow color
 
 // bronze
 /*
@@ -65,6 +67,7 @@ var materialDiffuse  = vec4(0.4 , 0.4 , 0.4 , 1.0);
 var materialSpecular  = vec4(0.774597 , 0.774597 , 0.774597 , 1.0);
 var materialShininess = 76.8;
 */
+//Is very similar to silver 
 
 // copper
 /*
@@ -74,6 +77,7 @@ var materialSpecular  = vec4(0.256777 , 0.137622 , 0.086014 , 1.0);
 var materialShininess = 76.8;
 */
 
+
 // gold
 /*
 var materialAmbient  = vec4(0.24725 , 0.1995 , 0.0745 , 1.0);
@@ -81,6 +85,7 @@ var materialDiffuse  = vec4(0.75164 , 0.60648 , 0.22648 , 1.0);
 var materialSpecular  = vec4(0.628281 , 0.555802 , 0.366065 , 1.0);
 var materialShininess = 51.2;
 */
+//just turns a gold color
 
 // pewter
 /*
@@ -89,6 +94,7 @@ var materialDiffuse  = vec4(0.42745 , 0.470588 , 0.541176 , 1.0);
 var materialSpecular  = vec4(0.3333 , 0.3333 , 0.521569 , 1.0);
 var materialShininess = 9.84615;
 */
+//more of a contrast of light and a ligter grey color
 
 // silver
 /*
@@ -105,6 +111,7 @@ var materialDiffuse  = vec4(0.2775 , 0.2775 , 0.2775 , 1.0);
 var materialSpecular  = vec4(0.773911 , 0.773911 , 0.773911 , 1.0);
 var materialShininess = 89.6;
 */
+//just turned a silver color
 
 var ctm;
 var ambientColor, diffuseColor, specularColor;
@@ -250,3 +257,4 @@ function render(){
 }
 
 shadedCube();
+
