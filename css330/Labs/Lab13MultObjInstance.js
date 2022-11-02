@@ -130,3 +130,4 @@ function render(){
 
     gl.drawArraysInstanced(gl.TRIANGLES, 0, numPositions,3);
 }
+
