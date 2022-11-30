@@ -1,4 +1,7 @@
+// shadow map example
 
+// two objects: a rotatable cube and triangle
+// point light source behind triangle
 
 "use strict";
 
@@ -50,12 +53,12 @@ var cubeVertices = [
 ];
 
 var cubeColors = [
-    vec4(1.0, 0.0, 0.0, 1.0),  
-    vec4(1.0, 1.0, 0.0, 1.0),  
-    vec4(0.0, 1.0, 0.0, 1.0),  
-    vec4(0.0, 0.0, 1.0, 1.0),  
-    vec4(1.0, 0.0, 1.0, 1.0),  
-    vec4(0.0, 1.0, 1.0, 1.0)   
+    vec4(1.0, 0.0, 0.0, 1.0),  // red
+    vec4(1.0, 1.0, 0.0, 1.0),  // yellow
+    vec4(0.0, 1.0, 0.0, 1.0),  // green
+    vec4(0.0, 0.0, 1.0, 1.0),  // blue
+    vec4(1.0, 0.0, 1.0, 1.0),  // magenta
+    vec4(0.0, 1.0, 1.0, 1.0)   // cyan
 ];
 
 var triangleVertices = [
