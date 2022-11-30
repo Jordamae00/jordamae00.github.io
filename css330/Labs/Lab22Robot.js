@@ -89,7 +89,7 @@ var viewerPos;
 
 init();
 
-//-------------------------------------------
+
 
 function scale4(a, b, c) {
    var result = mat4();
@@ -99,7 +99,7 @@ function scale4(a, b, c) {
    return result;
 }
 
-//--------------------------------------------
+
 
 
 function createNode(transform, render, sibling, child){
