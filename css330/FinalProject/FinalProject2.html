@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id = "gl-canvas" width = "512" height = "512"> </canvas>
+<title>CS 330 Final Project</title>
+
+<button id= "xButton">Rotate X</button>
+<button id= "yButton">Rotate Y</button>
+<button id= "zButton">Rotate Z</button>
+<button id = "ButtonT">Toggle Rotation</button>
+<script id="vertex-shader" type="x-shader/x-vertex">
+
+    attribute vec4 a_position;
+    attribute vec2 a_texcoord;
+    
+    uniform mat4 u_matrix;
+    
+    varying vec2 v_texcoord;
+    
+    void main() {
+      // Multiply the position by the matrix.
+      gl_Position = u_matrix * a_position;
+    
+      // Pass the texcoord to the fragment shader.
+      v_texcoord = a_texcoord;
+    }
+    </script>
+    <!-- fragment shader -->
+    <script  id="fragment-shader-3d" type="x-shader/x-fragment">
+    precision mediump float;
+    
+    // Passed in from the vertex shader.
+    varying vec2 v_texcoord;
+    
+    // The texture.
+    uniform sampler2D u_texture;
+    
+    void main() {
+       gl_FragColor = texture2D(u_texture, v_texcoord);
+    }
+    </script>
+    <script src="../Common/initShaders.js"></script>
+    <script src="../Common/MVnew.js"></script>
+    <script src="FinalProject2.js"></script>
+
+</body>
+</html>
