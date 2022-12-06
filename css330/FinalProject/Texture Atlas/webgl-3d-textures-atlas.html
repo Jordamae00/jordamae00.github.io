@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=yes">
+<!--<meta name="viewport" content="width=device-width, initial-scale=2.0, user-scalable=yes"> -->
 <title>WebGL - Textures - Texture Atlas</title>
 <link type="text/css" href="webgl-tutorials.css" rel="stylesheet">
 </head>
@@ -227,7 +227,7 @@ function main() {
 function setGeometry(gl) {
   var positions = new Float32Array(
     [
-     -0.5, -0.5,  -0.5,
+    -0.5, -0.5,  -0.5,
     -0.5,  0.5,  -0.5,
      0.5, -0.5,  -0.5,
     -0.5,  0.5,  -0.5,
@@ -269,7 +269,6 @@ function setGeometry(gl) {
      0.5,   0.5, -0.5,
      0.5,   0.5,  0.5,
 
-
     ]);
   gl.bufferData(gl.ARRAY_BUFFER, positions, gl.STATIC_DRAW);
 }
@@ -283,15 +282,15 @@ function setTexcoords(gl) {
         // select the top left image
         0   , 0  ,
         0   , 0.5,
-        0.25, 0  ,
+        0.5, 0  ,
         0   , 0.5,
-        0.25, 0.5,
-        0.25, 0  ,
+        0.5, 0.5,
+        0.5, 0  ,
         // select the top middle image
-        0.25, 0  ,
+        0.5, 0  ,
         0.5 , 0  ,
-        0.25, 0.5,
-        0.25, 0.5,
+        0.5, 0.5,
+        0.5, 0.5,
         0.5 , 0  ,
         0.5 , 0.5,
         // select to top right image
