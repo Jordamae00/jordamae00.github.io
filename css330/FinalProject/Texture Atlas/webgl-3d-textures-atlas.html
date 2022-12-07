@@ -227,6 +227,12 @@ function main() {
 function setGeometry(gl) {
   var positions = new Float32Array(
     [
+    -0.5, -0.5,  -0.5,
+    -0.5,  0.5,  -0.5,
+     0.5, -0.5,  -0.5,
+    -0.5,  0.5,  -0.5,
+     0.5,  0.5,  -0.5,
+     0.5, -0.5,  -0.5,
 
     -0.5, -0.5,   0.5,
      0.5, -0.5,   0.5,
@@ -273,12 +279,13 @@ function setTexcoords(gl) {
       gl.ARRAY_BUFFER,
       new Float32Array(
         [
-          0   , 0  ,
+        // select the top left image
+        0   , 0  ,
         0   , 0.5,
-        0.25, 0  ,
+        0.5, 0  ,
         0   , 0.5,
-        0.25, 0.5,
-        0.25, 0  ,
+        0.5, 0.5,
+        0.5, 0  ,
         // select the top middle image
         0.25, 0  ,
         0.5 , 0  ,
@@ -322,6 +329,3 @@ function setTexcoords(gl) {
 main();
 </script>
 </html>
-
-
-
