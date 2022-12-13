@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="CakeOrder.css">
+    <title>Ordering Form</title>
+    
+</head>
+<body>
+<form action="/action_page.php">
+    <h1>The Sweet Shop Cake Ordering Form</h1>
+    <p><b>Personal Information:</b></p>
+    <label for="fname">First Name</label><br>
+    <input type="text" id="fname" name="fname" value="Jane" required="required"><br>
+    <label for="lname">Last Name</label><br>
+    <input type="text" id="lname" name="lname" value="Doe" required="required"><br>
+    <label for="Phone">Phone Number</label><br>
+    <input type="text" id="Phone" name="Phone" value="(724)-XXX-XXXX" required="required"><br>
+    <label for="email">Email Address</label><br>
+    <input type="text" id="email" name="email" value="myemail@gmail.com" required="required"><br>
+   
+   
+    <label for="Occasion">Select the Occasion:</label>
+        <select name="Occasion" id="Occasion" required="required">
+            <option value="BabyShower">Baby Shower</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Gender Reveal">Gender Reveal</option>
+            <option value="ProfessionalEvent">Professional Event</option>
+            <option value="Wedding">Wedding</option>
+            <option value="Other">Other</option>
+        </select><br>
+    <label for="People">How many people will be attending?</label>
+        <input type="number" required="required">
+    <p><b>Cake Information:</b> <br>
+        
+    <label for="Flavors">What flavor of cake would you like?</label> <br>
+    <div class="radio-toolbar">
+    <input type="radio" name="Flavors" id="Almond" value="Almond" check="checked"/> 
+    <label for="Almond">White</label>
+    <input type="radio" name="Flavors" id="Chocolate" value="Chcolate" check="checked"/> 
+    <label for="Chocolate">Chocolate</label>
+    <input type="radio" name="Flavors" id="Coconut" value="Coconut" check="checked"/> 
+    <label for="Coconut">Yellow</label>
+    <input type="radio" name="Flavors" id="French Vanilla" value="French Vanilla" check="checked"/> 
+    <label for="French Vanilla">Yellow (Vanilla)</label>
+    <input type="radio" name="Flavors" id="Lemon" value="Lemon" check="checked"/> 
+    <label for="Lemon">Red Velvet</label>
+    <input type="radio" name="Flavors" id="Orange" value="Orange" check="checked"/> 
+    <label for="Orange">Marble (Yellow & Chocolate)</label>
+    </div>
+
+
+    <label for="Filling"><p>What filling would you like?</p></label> <br>
+    <div class="radio-toolbar">
+    <input type="radio" name="filling" id="Apricot" value="Apricot" check="checked"/> 
+    <label for="Apricot">Bavarian Cream</label>
+    <input type="radio" name="filling" id="ChocolateFILL" value="ChocolateFILL" check="checked"/> 
+    <label for="ChocolateFILL">Cherry</label>
+    <input type="radio" name="filling" id="Mocha" value="Mocha" check="checked"/> 
+    <label for="Mocha">Chocolate Buttercream</label>
+    <input type="radio" name="filling" id="Peanut Butter" value="PeanutButter" check="checked"/>
+    <label for="Peanut Butter">Peanut Buttercream</label>
+    <label for="Pineapple">Raspberry</label>
+    <input type="radio" name="filling" id="Raspberry" value="Raspberry" check="Raspberry"/> 
+    <label for="Raspberry">Lemon</label>
+    <input type="radio" name="filling" id="StrawberryFILL" value="StrawberryFILL" check="checked"/> 
+    <label for="StrawberryFILL">Strawberry</label>
+    <input type="radio" name="filling" id="None" value="None" check="checked"/> 
+    <label for="None">None</label>
+    </div>
+
+
+
+    <label for="icing"><p>What flavor of icing would you like?</p></label> <br>
+    <div class="radio-toolbar">
+    <input type="radio" name="icing" id="Blackberry" value="Blackberry" check="checked"/> 
+    <label for="Blackberry">Vanilla Buttercream</label>
+    <input type="radio" name="icing" id="Cherry" value="Cherry" check="checked"/> 
+    <label for="Cherry">Chocolate Buttercream</label>
+    <input type="radio" name="icing" id="Cream Cheese" value="Cream Cheese" check="checked"/> 
+    <label for="Cream Cheese">Cream Cheese</label>
+    <input type="radio" name="icing"  id="Champagne Buttercream" value="Champagne Buttercream" check="checked"/> 
+    <label for="Champagne Buttercream">Whipped Cream</label>
+    <input type="radio" name="icing" id="ChocolateICE" value="ChcolateICE" check="checked"/> 
+    <label for="ChocolateICE">Fudge</label>
+   
+    
+</div>
+<p> Please give a small description of the cake you want (for example do you want tiers? what are the main colors or theme? Some interests of person receiving cake. Overall shape of the cake. etc. </textarea>
+</p>
+<textarea>
+</textarea>
+</p>
+
+
+        <button type="submit" formaction="PostOrderForm.html">Submit</button>
+  </form>
+</body>
+</html>
